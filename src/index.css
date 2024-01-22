@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Banners{
+  padding-top: 30px;
+  justify-content: center;
+}
+.Banners  span{
+color: green;
+}
+.fa-heart{
+  margin-left: 10px;
+}
+.fa-briefcase{
+  margin-left: 10px;
+}
+.fa-mug-saucer {
+  margin-left: 10px;
+}
+.Banners .heading h1{
+  font-weight: 700;
+}
+.fa-message{
+  margin-left: 10px;
+  color: green;
+
+}
+.navbar-nav li{
+  font-weight: 500;
+}
+.blog{
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.navbutton{
+  font-weight: 500;
+  border-radius: 50px;
+  color: white;
+  background-color: green;
+}
+.card:hover{
+  background-color: #F6E0E3;
+}
