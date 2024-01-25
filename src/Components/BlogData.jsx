@@ -1,19 +1,22 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import datalist from "../Components/Datafile";
+import Fetch from "./Axios";
 
 const BlogData = () => {
-  const { state } = useLocation();
-  console.log(useLocation(),"------");
-  console.log(state,"data---")
+let {id}=useParams();
+const blogData=datalist.find(blogData=>String(blogData.id)===id);
+
   return (
     <div className="container">
       <div className="card">
         <div className="card-body">
-          <h2>{state.title}</h2>
-          <p>{state.body}</p>
-          <p>{state.id}</p>
+          <h2>{blogData.id}</h2>
+          <h3>{blogData.body}</h3>
+         
         </div>
       </div>
+      <Fetch/>
     </div>
   );
 };

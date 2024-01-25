@@ -17,7 +17,7 @@ const Banners = () => {
           </div>
         </div>
         <Data />
-        console.log(Data);
+       
       </div>
     </div>
   );
