@@ -2,6 +2,7 @@ import React from "react";
 import banner from "../img/banner.png";
 import Data from "./Data";
 const Banners = () => {
+  console.log("homepage")
   return (
     <div className="Banners">
       <div className="container">
@@ -17,6 +18,7 @@ const Banners = () => {
           </div>
         </div>
         <Data />
+        
        
       </div>
     </div>

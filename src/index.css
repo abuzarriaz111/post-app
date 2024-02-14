@@ -50,6 +50,26 @@ color: green;
   color: white;
   background-color: green;
 }
+.card{
+  padding: 20px;
+}
 .card:hover{
-  background-color: #F6E0E3;
+  background-color: #fdc6ce;
+}
+.text{
+  text-decoration: none;
+  color:green;
+}
+.buttonlink{
+  text-decoration: none;
+  padding: 5px;
+}
+.buttonlink:hover{
+  color:white;
+}
+.editpost{
+  margin-top: 70px;
+}
+.displaybutton{
+  display: block
 }

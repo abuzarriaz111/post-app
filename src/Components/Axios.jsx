@@ -29,9 +29,9 @@ const Fetch = () => {
           {data.map((blog) => {
             return (
                 <tr>  
-                <td>{blog.id}</td>
-                <td>{blog.title}</td>
-                <td>{blog.body}</td>
+                <td>{data.id}</td>
+                <td>{data.title}</td>
+                <td>{data.body}</td>
               </tr>
             );
           })}
