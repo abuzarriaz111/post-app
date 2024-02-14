@@ -9,7 +9,12 @@ const Data = () => {
   const [loading, setLoading] = useState(false);
   const [id, setId] = useState();
   const navigate = useNavigate();
+  const [start, setStart] = useState(0);
+  const [limit, setLimit] = useState(10);
+ 
+
   
+ 
 
   // const handleEdit = (id) => {
   //   navigate(`/Editpost/${id}`);
@@ -26,10 +31,13 @@ const Data = () => {
     setId(myid);
   };
 
+
+
+
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get(`https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${limit}`)
       .then((response) => {
         setData(response.data);
       })
@@ -39,7 +47,7 @@ const Data = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [start, limit]);
 
   return (
     <div className="container">
@@ -131,8 +139,29 @@ const Data = () => {
               </span>
             </div>
           ))}
+                        <div>
+              <select
+                className=" mt-2 mb-3 navbutton"
+                onChange={(e) => setLimit(Number(e.target.value))}
+              >
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+      
+              <button
+                className=" mb-3 navbutton ms-2"
+                onClick={() => setLimit(limit + 10)}
+              >
+                Next
+              </button>
+            </div>
+
         </div>
       )}
+       
+     
     </div>
   );
 };
