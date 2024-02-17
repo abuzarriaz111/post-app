@@ -35,15 +35,15 @@ useEffect(()=>{
 
   return (
     <div className="container">
-  
       <div className="card shadow">
-        <div >
-          
-        <h1 >{data.userId}</h1>
+        <div>
+        <h1>{data.userId}</h1>
           <h3>{data.body}</h3>
           <h2>{data.id}</h2> 
         </div>
+        <div>
         <button onClick={handleBack} className="navbutton">Back</button>
+        </div>
       </div>
       {/* <Fetch/> */}
     </div>

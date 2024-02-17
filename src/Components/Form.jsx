@@ -11,6 +11,7 @@ const Form = () => {
   const [useriderror,setuseriderror]=useState(" ")
   const [bodyerror,seterrorbody]=useState("")
   const [loading, setLoading] = useState(false);
+   const [successMessage, setSuccessMessage] = useState("");
   const handleTitle = (e) => {
     const value = e.target.value;
     setTitle(value);
@@ -73,7 +74,8 @@ const Form = () => {
         .then((response) => {
           console.log(response);
           if (response.status >= 200 && response.status < 300) {
-            return response.data;
+            // return response.data;
+            setSuccessMessage("Form submitted successfully!");
           }
         })
         .then((data) => {
@@ -102,6 +104,7 @@ const Form = () => {
       ) :(
         <div className="card shadow ">
         <h2>Add Your Post</h2>
+        {successMessage && <p className="text-success">{successMessage}</p>}
         <form onSubmit={handlesubmit}>
         
           <label for="formGroupExampleInput"></label>
